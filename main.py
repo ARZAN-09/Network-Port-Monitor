@@ -10,11 +10,13 @@ def main():
     print("=" * 40)
 
     ip = input("Enter IP Address: ")
+    a = int(input("Enter initial port number "))
+    b = int(input("Enter lat  port number "))
 
     print("\nScanning ports...")
     print("Please wait...\n")
 
-    open_ports = scan_ports(ip, 1, 1000)
+    open_ports = scan_ports(ip, a, b)
 
     if not open_ports:
         print("No open ports found.")
